@@ -1,37 +1,4 @@
 <?php
-$x = 10;
-echo $x;
-?>
-
-<br>
-
-<?php
-$myVar = "Hello!";
-echo $myVar;
-?>
-
-<br>
-
-<?php
-// Defines the variable with name x and the value 20
-$x = 20;
-//defines function f
-function f()
-{
-  //Within a function, defines the variable x with value 10
-  $x = 10;
-  //Printing variables on the screen
-  echo $x;
-}
-//Calling function f
-f();
-//Printing variable x
-echo $x;
-?>
-
-<br>
-
-<?php
 // the addition of two numbers
 //assigning a value to a variable x
 $x=1;
@@ -56,7 +23,8 @@ $p = ($r*$r)*PI;
 echo $p;
 ?>
 
-<br>
+
+<br> 
 
 <?php
 $price = 527.356;
@@ -66,4 +34,10 @@ echo number_format($pricewithdiscount,2)
 ?>
 
 <br>
+
+<?php
+for($i=0;$i<1000;$i++)
+if($i%3 == 0 && $i != 0)
+echo $i . "<br>";
+?>
 
