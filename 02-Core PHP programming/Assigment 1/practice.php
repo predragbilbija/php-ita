@@ -276,4 +276,87 @@ foreach($v as $k2=>$v2)
 echo $k2." ".$v2."<br>";
 ?>
 
+<!-- 16. Proveriti da li korisnik ima pravo pristupa, pri čemu se dozvoljeni korisnici nalaze u
+zadatom nizu. -->
+
+<?php
+$username = "Bruce2";
+$password = "Betmen";
+$users = array(
+"Peter"=>"Spajdermen",
+"Klark"=>"Supermen",
+"Bruce"=>"Betmen"
+);
+$brojac=0;
+foreach($users as $k=>$v)
+{
+if($k==$username && $v==$password)
+{
+echo "Hello $username";
+break;
+}
+$brojac++;
+
+}
+if($brojac==count($users)) echo "Invalid user";
+?>
+
+<!-- 17. Prikazati upotrebu naredni implode i explode pri čemu se koristi graničnik ||. -->
+
+<?php
+$c = array("1","2","3","4","5");
+$d = implode(",",$c);
+print_r($d);
+echo $d;
+$d = "1||2||3||4||5";
+$e = explode('||',$d);
+echo "<br>";
+foreach($e as $prom)
+{
+echo $prom." ";
+} ?>
+
+<!-- 18. Ispisati sve brojeve do 100 koji su deljivi samo sa 3, samo sa 5, i istovremeno i sa 3 i sa 5. -->
+<?php
+for ($i=1;$i<=100;$i++)
+{
+if ($i%15==0) echo "$i: i sa 3 i sa 5.<br>";
+else if($i%3==0) echo "$i: samo sa 3.<br>";
+else if($i%5==0) echo "$i: samo sa 5.<br>";
+} ?>
+
+<!-- 19. Napisati program koji stvara niz bez upotrebe ključne reči array i funkciju koja ga ispisuje. -->
+
+<?php
+$niz = [
+["username", "password"],
+["Mika", "mik123"],
+["Sima", "123sim"],
+["Pera", "12per3"]
+];
+function pisi($arr) // arr dobija vrednost $niz
+{
+for($i=0; $i<count($arr); $i++)
+{
+for($a=0; $a<count($arr[$i]); $a++)
+{
+echo $arr[$i][$a].' ';
+}
+echo '<br>';
+}
+}
+pisi($niz);
+?>
+
+<!-- 29. Kreirati funkciju last koja vraća poslednji element u nizu -->
+
+<?php
+$a= array(4, 6, 2, 22, 11,5);
+function last($a)
+{
+foreach($a as $i);
+return $i;
+}
+echo last($a)+last($a);
+?>
 
