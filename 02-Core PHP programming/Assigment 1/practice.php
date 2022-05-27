@@ -348,7 +348,7 @@ echo '<br>';
 pisi($niz);
 ?>
 
-<!-- 29. Kreirati funkciju last koja vraća poslednji element u nizu -->
+<!-- 20. Kreirati funkciju last koja vraća poslednji element u nizu -->
 
 <?php
 $a= array(4, 6, 2, 22, 11,5);
