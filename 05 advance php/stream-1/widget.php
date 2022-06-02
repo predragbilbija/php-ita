@@ -2,11 +2,20 @@
 class Widget {
     public $naslov;
     public $tekst;
+    private $color = "black";
+    private $colorWhiteList = array("red","blue","green","black");
 
-    function f() {
+    function setColor($color) {
+        if(in_array($color,$this->colorWhiteList)) {
+            $this->color = $color;
+        }
+        
+    }
+
+    function draw() {
         $tekst = '<div class="blokk">
 
-		<header><p style="margin: 0; text-align: center;padding:10px 0;; color: #fff!important; background: #000; border-bottom: 1px solid #E8E8E8; font-weight: bold; font-size: 1.5em;">'.$this->naslov.'</p></header>
+		<header><p style="margin: 0; text-align: center;padding:10px 0;; color: #fff!important; background:'.$this->color.'; border-bottom: 1px solid #E8E8E8; font-weight: bold; font-size: 1.5em;">'.$this->naslov.'</p></header>
 		
 		<p> 
 			</p><p>'.$this->tekst.'</p>
