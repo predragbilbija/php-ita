@@ -43,3 +43,47 @@ print_r ($petar);
 
 ?>
 
+<br>
+<br>
+
+<!-- -->
+
+
+<?php
+
+class Pas {
+    static $brojNoguPsa = 4;
+    public $ime;
+    public $brojNogu;
+    static function zvuk() {
+        echo "Psi laju";
+    }
+    function laj() {
+        echo "Vau Vau";
+    }
+
+}
+
+$dzeki = new Pas;
+$dzeki->ime = "Dzeki";
+$dzeki->brojNogu = 3;
+$dzeki->laj();
+
+Pas::zvuk();
+
+print_r($dzeki);
+
+//razlika izmedju statickih i instancnih clanova
+?>
+
+<br>
+<br>
+<!--  -->
+
+
+<?php
+
+
+
+
+
