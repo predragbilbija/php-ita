@@ -1,4 +1,8 @@
 <?php 
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 require "widget.php";
 
 $w = new Widget;
@@ -7,7 +11,7 @@ $w2 = new Widget;
 
 $w->naslov = "Zelite dobru platu?";
 $w->tekst = "Zelim tekst tekst tekst";
-$w->setColor("green");
+$w->setColor("red");
 
 $w1->naslov = "Sta kazu nasi polaznici?";
 $w1->tekst = "Nasi polaznici kazu: tekst tekst tekst"; 
@@ -17,9 +21,10 @@ $w2->tekst = "Ovim this kupi info za novi widget iz fajla widget.php kao i za pr
 
 
 
-$w-> draw();
-$w1-> draw();
-$w2-> draw();
+$w->draw();
+$w1->draw();
+$w2->draw();
+
 
 ?>
 
