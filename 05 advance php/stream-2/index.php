@@ -15,7 +15,6 @@ class Covek {
 // $objekat->ime = "Jovan";
 // $objekat1->ime = "Pedja";
 
-
 // print_r ($objekat);
 // print_r ($objekat1);
 
@@ -82,8 +81,73 @@ print_r($dzeki);
 
 
 <?php
+interface imaMetodRender {
+    function render();
+}
+
+abstract class Widget{
+    abstract function render();
+    abstract function getNaziv();
+    function widgetInfo() {
+        echo $this->getNaziv();
+        echo "<br>";
+        $this->render();
+    }
+
+}
+
+class WidgetSpan extends Widget {
+    function getNaziv() {
+        return __CLASS__;
+    }
+
+    function render(){ 
+        echo "<span>Cao iz spana</span>";
+    }
+}
+
+class WidgetPoruka extends Widget {
+    function getNaziv() {
+        return __CLASS__;
+    }
+
+    function render () {
+        echo "Cao kako si";
+    }
+}
+
+class WidgetSlikaLink{
+    function getNaziv() {
+        return __CLASS__;
+    }
+    public $slika;
+    public $link;
+    function render () {
+        echo "<div><img width=100 src=''/> <div>naslov</div> </div>";
+    }
+}
+
+$w = new WidgetSlikaLink ;
+$w->slika = "https://lumiere-a.akamaihd.net/v1/images/Darth-Vader_6bda9114.jpeg?region=0%2C23%2C1400%2C785&width=960";
+$w->link = "https://www.starwars.com/databank/darth-vader";
 
 
+class Pedja implements imaMetodRender {
+    public function render() {
+        echo "al sam te presao";
+    }
+} 
 
+$p = new Pedja;
+$p->render();
 
+// abstraktne klase/ abstraktne metode/ interface
+
+?>
+
+<br>
+<br>
+<!--  -->
+
+<?php
 
