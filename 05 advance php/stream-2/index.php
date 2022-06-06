@@ -93,7 +93,6 @@ abstract class Widget{
         echo "<br>";
         $this->render();
     }
-
 }
 
 class WidgetSpan extends Widget {
@@ -142,12 +141,5 @@ $p = new Pedja;
 $p->render();
 
 // abstraktne klase/ abstraktne metode/ interface
-
 ?>
-
-<br>
-<br>
-<!--  -->
-
-<?php
 
