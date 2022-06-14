@@ -1,0 +1,53 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+        <body>
+            <div id="main">
+                <h1>Contact us</h1>
+                <form enctype="multipart/form-data" method="post" action="contact.php">
+                    <label for="ime">Ime:</label><br>
+                    <input type="text" name="ime" id="ime" placeholder="Upisite svoje ime">
+                    <br><br>
+
+                    <label for="prezime">Prezime:</label><br>
+                    <input type="text" name="prezime" id="prezime" placeholder="Upisite svoje prezime">
+                    <br><br>
+
+                    <input value="slazeSe" type="checkbox"  name="potvrda" id="potvrda">
+                    <label for="potvrda">Slazem se sa uslovima...</label>
+                    <br><br>
+
+                    <input value="f" checked type="radio" name="pol" id="zenski">
+                    <label for="zenski">Zenski</label>
+                    <br>
+
+                    <input value="m"  type="radio" name="pol" id="muski">
+                    <label for="muski">Muski</label>
+                    <br><br>
+
+                    <label for="poruka">Poruka</label><br>
+                    <textarea name="poruka" id="poruka" cols="30" rows="4"></textarea>
+                    <br><br>
+
+                    <p>Omiljeni film</p>
+                    <select name="omiljniFIlm">
+                        <option value="10">Matrix</option>
+                        <option value="9">Paris Texas</option>
+                        <option value="8">Inception</option>
+                    </select>
+                    <br><br>
+
+                    <input name="slika" type="file">
+                    <br><br>
+
+                    <input type="submit" name="submit" id="submit" value="Posalji podatke">
+                    <input type="reset" name="reset" id="reset" value="Ponisti formu">
+                </form>
+            </div>
+        </body>
+    </html>
