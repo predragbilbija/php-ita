@@ -26,6 +26,5 @@ while(!feof($file)) {
     echo $grad . " (" . $temperatura . ")" . "<img src='$slika' align='top' width='20' >" . "<br>";
 }
 
-
-
 fclose($file);
+
