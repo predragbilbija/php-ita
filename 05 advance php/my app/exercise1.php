@@ -2,7 +2,7 @@
 require "config.php";
 
 $person = new Person;
-$person->firstname = "Sally";
+$person->firstname = "pedja";
 $person->lastname = "Jonson";
 
-$person->Insert();
+$person->Update();

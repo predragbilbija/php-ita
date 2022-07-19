@@ -1,0 +1,24 @@
+<select onchange="if(this.value==-1) return; getCapital(this.value)">
+    <option value="-1">Select country:</option>
+    <option value="1">Serbia</option>
+    <option value="2">France</option>
+    <option value="3">England</option>
+</select>
+
+<div id="target"></div>
+
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if(xhr.readyState==4) {
+            var target = document.getElementById("target");
+            target.innerHTML = xhr.responseText;
+        }
+    }
+
+    function getCapital(id) {
+        xhr.open("get","distributer.php?id="+id,true);
+        xhr.send(null);
+    }
+
+</script>
